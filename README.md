@@ -7,6 +7,7 @@ Riiid线上教育公司，需要通过学生过往的讲座记录和答题记录
 
 
 二、比赛特殊说明
+
 1.、建议先去kaggle看一下官方数据集的介绍 https://www.kaggle.com/c/riiid-test-answer-prediction/data
 
 2.这次比赛提交方式是通过kaggle api一批一批的生成test data。目的是为了防止你利用test data的本身时间上的特性来预测，以防数据穿越。
@@ -38,6 +39,9 @@ psutil==5.7.2
 
 五、代码包含四份文件
 1.LGBM gen_data.ipynb 用作生成LGBM所需的特征
+
 2.LGBM train.ipynb 用作训练LGBM模型
+
 3.SAINT train.ipynb 用作训练SAINT模型
+
 4.LGBM+SAINT inference 用作在kaggle上做预测
