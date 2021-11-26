@@ -3,7 +3,7 @@ https://www.kaggle.com/c/riiid-test-answer-prediction
 
 
 
-# 比赛介绍：
+## 比赛介绍：
 
 Riiid线上AI教育公司，提供个性化/千人千面的教育服务，本次竞赛需要通过学生过往的讲座记录和答题记录，来预测学生当前在回答的这道题目是否能够答对。
 
@@ -14,7 +14,7 @@ SAINT+   https://arxiv.org/abs/2010.12042  Riiid团队
 
 
 
-# 比赛trick点
+## 比赛trick点
 
 ### 传统机器学习和深度学习的结合
 比赛一开始我们采用了传统的LGBM做分类，达到了铜牌的水平。
@@ -43,7 +43,7 @@ test_data一共2500k行，每一批传过来的数据20行左右。
 本次比赛test data中的所有content_id（讲座和题目），都不会出现新的。但会出现新的user_id（模拟新用户进来的冷启动问题）。
 
 
-# 模型结构
+## 模型结构
 
 ### 输入特征
 1. content_id
@@ -84,7 +84,7 @@ Note that I have tried categorical and continuous embedding in prior elapsed tim
 
 
 
-# 代码运行前所需要的预备数据
+## 代码运行前所需要的预备数据
 
 1. https://www.kaggle.com/c/riiid-test-answer-prediction/data # kaggle官方比赛数据集
 
@@ -92,7 +92,7 @@ Note that I have tried categorical and continuous embedding in prior elapsed tim
 
 
 
-# 版本
+## 版本
 python 3.8
 
 numpy==1.19.2
@@ -118,7 +118,7 @@ psutil==5.7.2
 
 
 
-# 代码包含四份文件
+## 代码包含四份文件
 
 1.LGBM gen_data.ipynb 用作生成LGBM所需的特征
 
@@ -127,3 +127,6 @@ psutil==5.7.2
 3.SAINT train.ipynb 用作训练SAINT模型
 
 4.LGBM+SAINT inference 用作在kaggle上做预测
+
+## TL;DR
+Riiid线上AI教育公司，提供个性化的教育服务，竞赛需要通过学生过往的讲座记录和答题记录，来预测学生当前在回答的这道题目是否能够答对。我们采用了SAINT+模型，并加以改进后，对lgbm和saint+进行ensemble后得到了最终的银牌。
